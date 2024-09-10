@@ -1,4 +1,11 @@
-@extends('layouts.app')
+@extends('dashLayout.app')
+
+@section('title', 'Dashboard Mahasiswa')
+
+@section('sidebar')
+    @include('mhs.layouts.sidebar')
+@endsection
+
 
 @section('content')
 <div class="dashboard">

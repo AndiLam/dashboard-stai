@@ -40,6 +40,21 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+    
+        'mhs' => [
+            'driver' => 'session',
+            'provider' => 'mahasiswas',
+        ],
+    
+        'dsn' => [
+            'driver' => 'session',
+            'provider' => 'dosens',
+        ],
     ],
 
     /*
@@ -63,6 +78,21 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Adm::class,
+        ],
+    
+        'mahasiswas' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Mhs::class,
+        ],
+    
+        'dosens' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Dsn::class,
         ],
 
         // 'users' => [
@@ -93,11 +123,33 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'mahasiswas' => [
+            'provider' => 'mahasiswas',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'dosens' => [
+            'provider' => 'dosens',
+            'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

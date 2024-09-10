@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const profileMenu = document.getElementById('profileDropdownMenu');
     if (profileToggle && profileMenu) {
         profileToggle.addEventListener('click', function() {
-            profileMenu.classList.toggle('active');
+            profileMenu.classList.toggle('hidden'); // Use 'hidden' class to toggle visibility
             this.querySelector('i').classList.toggle('rotate');
         });
 
         // Close dropdown when clicking outside
         document.addEventListener('click', function(e) {
             if (!profileToggle.contains(e.target) && !profileMenu.contains(e.target)) {
-                profileMenu.classList.remove('active');
+                profileMenu.classList.add('hidden'); // Ensure the menu is hidden
             }
         });
     }
