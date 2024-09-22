@@ -83,7 +83,7 @@
         <div class="border p-4 rounded-b-lg bg-gray-50">
             <div class="flex justify-between items-center mb-6 border-b pb-2">
                 <div class=" ml-5 flex items-center">
-                    <img src="images/STAI.png" alt="STAI Almast" class="h-20 mr-4">
+                    <img src="{{ asset('images/SATI.png') }}" alt="STAI Almast" class="h-20 mr-4">
                 </div>
                 <div>
                     <h1 class="text-xl font-bold">SEKOLAH TINGGI AGAMA ISLAM</h1>
