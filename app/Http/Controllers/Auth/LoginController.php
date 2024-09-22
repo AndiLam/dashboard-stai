@@ -9,13 +9,11 @@ class LoginController extends Controller
 {
     // Data login default (sebagai pengganti database)
     protected $mahasiswaUsers = [
-        ['nim' => '123456', 'password' => 'password123'],
-        ['nim' => '654321', 'password' => 'password654'],
+        ['nim' => '112233', 'password' => '112233'],
     ];
 
     protected $dosenUsers = [
-        ['nidn' => '987654', 'password' => 'password987'],
-        ['nidn' => '456789', 'password' => 'password456'],
+        ['nidn' => '445566', 'password' => '445566'],
     ];
 
     protected $adminUsers = [
@@ -25,17 +23,17 @@ class LoginController extends Controller
 
     public function showMhsLoginForm()
     {
-        return view('mhs.loginMhs')->with('loginRoute', route('mhs.loginMhs'));
+        return view('mhs.loginMhs')->with('loginRoute', route('loginMhs'));
     }
 
     public function showDsnLoginForm()
     {
-        return view('dsn.loginDsn')->with('loginRoute', route('dsn.loginDsn'));
+        return view('dsn.loginDsn')->with('loginRoute', route('loginDsn'));
     }
 
     public function showAdminLoginForm()
     {
-        return view('adm.loginAdmin')->with('loginRoute', route('adm.loginAdmin'));
+        return view('adm.loginAdmin')->with('loginRoute', route('loginAdmin'));
     }
 
     // Login Mahasiswa
@@ -47,6 +45,7 @@ class LoginController extends Controller
         foreach ($this->mahasiswaUsers as $user) {
             if ($user['nim'] === $nim && $user['password'] === $password) {
                 // Arahkan ke dashboard mahasiswa
+                $request->session()->put('user', ['role' => 'mahasiswa', 'nim' => $nim]);
                 return redirect()->route('dashboard')->with('success', 'Login berhasil sebagai Mahasiswa');
             }
         }
@@ -62,6 +61,7 @@ class LoginController extends Controller
 
         foreach ($this->dosenUsers as $user) {
             if ($user['nidn'] === $nidn && $user['password'] === $password) {
+                $request->session()->put('user', ['role' => 'dosen', 'nidn' => $nidn]);
                 return redirect()->route('dashboardDsn')->with('success', 'Login berhasil sebagai Dosen');
             }
         }
@@ -77,6 +77,7 @@ class LoginController extends Controller
 
         foreach ($this->adminUsers as $user) {
             if ($user['username'] === $username && $user['password'] === $password) {
+                $request->session()->put('user', ['role' => 'admin', 'username' => $username]);
                 return redirect()->route('dashboardAdm')->with('success', 'Login berhasil sebagai Admin');
             }
         }

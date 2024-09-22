@@ -1,9 +1,9 @@
 @extends('dashLayout.app')
 
-@section('title', 'Dashboard Dosen - STAI Al-Masthuriyah')
+@section('title', 'Dashboard Admin - STAI Al-Masthuriyah')
 
 @section('sidebar')
-    @include('dsn.layouts.sidebarDsn')
+    @include('adm.layouts.sidebarAdm')
 @endsection
 
 @section('content')

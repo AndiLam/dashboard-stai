@@ -12,63 +12,66 @@ class AdmController extends Controller
         return view('adm.dashboardAdm');
     }
 
-    // Menampilkan halaman KRS/Kartu Ujian
-    public function krs()
+    // Menampilkan halaman untuk absensi
+    public function isiAbsensiAdm()
     {
-        return view('mhs.konten.krs');
+        $semesters = [
+            ['id' => 1, 'name' => 'Semester 1', 'classes' => [
+                ['id' => 1, 'name' => 'PAI-A', 'programStudy' => 'Pendidikan Agama Islam', 'dosen' => 'Sopian Alviana, S.Kom., M.Kom'],
+                ['id' => 2, 'name' => 'HES-A', 'programStudy' => 'Hukum Ekonomi Syariah', 'dosen' => '-'],
+                ['id' => 3, 'name' => 'KPI-A', 'programStudy' => 'Komunikasi & Penyiaran Islam', 'dosen' => '-'],
+            ]],
+        ];
+
+        return view('adm.konten.absenAdm', compact('semesters'));
     }
 
-    // Menampilkan halaman Kartu Hasil Studi
-    public function kartuHasilStudi()
+    public function showAbsenAdm($semester, $kelas, $prodi)
     {
-        return view('mhs.konten.khs');
+        return view('adm.konten.showAbsenAdm', compact('semester', 'kelas', 'prodi'));
     }
 
-    // Menampilkan halaman Jadwal Kuliah
-    public function jadwalKuliah()
+    
+    // Menampilkan halaman untuk pengisian nilai mahasiswa
+    public function isiNilaiAdm()
     {
-        return view('mhs.konten.jadwal');
+        return view('adm.konten.nilaiAdm');
+    }
+    
+    // Menampilkan halaman keuangan
+    public function keuangAdm()
+    {
+        return view('adm.konten.keuanganAdm');
+    }
+    
+    // Menampilkan halaman manajemen
+    // Menampilkan halaman keuangan
+    public function editDosenAdm()
+    {
+        return view('adm.konten.editDsnAdm');
     }
 
-    // Menampilkan halaman Pengisian Rencana Studi
-    public function pengisianRencanaStudi()
+    // Menampilkan halaman keuangan
+    public function editMahasiswaAdm()
     {
-        return view('mhs.konten.prs');
+        return view('adm.konten.editMhsAdm');
     }
 
-    // Menampilkan halaman Status Aktif Mahasiswa
-    public function statusAktif()
+    // Menampilkan halaman keuangan
+    public function editMatkulAdm()
     {
-        return view('mhs.konten.status');
+        return view('adm.konten.editMkAdm');
     }
 
-    // Menampilkan halaman Absensi Mahasiswa
-    public function absensi()
+    // Menampilkan halaman keuangan
+    public function editJadwalKuliahAdm()
     {
-        return view('mhs.konten.absensi');
+        return view('adm.konten.jdwlKulAdm');
     }
 
-    // Menampilkan halaman Transkrip Mahasiswa
-    public function transkrip()
+    // Menampilkan halaman profile dosen
+    public function profileAdmin()
     {
-        return view('mhs.konten.transkrip');
-    }
-
-    // Menampilkan halaman Keuangan Mahasiswa
-    public function keuangan()
-    {
-        return view('mhs.konten.keuangan');
-    }
-
-    // Menampilkan halaman Perpustakaan
-    public function perpustakaan()
-    {
-        return view('mhs.konten.perpustakaan');
-    }
-
-    // Menampilkan halaman Profil Mahasiswa
-    public function profile()
-    {
-        return view('mhs.profile');
-    }
+        return view('adm.profileAdm');
+    }   
 }

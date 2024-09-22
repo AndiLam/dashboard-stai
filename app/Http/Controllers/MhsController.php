@@ -48,10 +48,10 @@ class MhsController extends Controller
         return view('mhs.konten.absensi');
     }
 
-    // Menampilkan halaman Transkrip Mahasiswa
-    public function transkrip()
+    // Menampilkan halaman Riwayat Nilai Mahasiswa
+    public function riwayat()
     {
-        return view('mhs.konten.transkrip');
+        return view('mhs.konten.riwayatNilai');
     }
 
     // Menampilkan halaman Keuangan Mahasiswa
@@ -70,6 +70,11 @@ class MhsController extends Controller
     public function profile()
     {
         return view('mhs.profile');
+    }
+
+    public function showResetFormMhs()
+    {
+        return view('mhs.layouts.resetMhs');
     }
     
 }

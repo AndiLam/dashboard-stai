@@ -21,12 +21,18 @@ class DsnController extends Controller
     // Menampilkan halaman untuk absensi
     public function isiAbsensi()
     {
-        return view('dsn.konten.absen');
+        return view('dsn.konten.absenDsn');
     }
 
     // Menampilkan halaman untuk pengisian niali mahasiswa
     public function isiNilai()
     {
         return view('dsn.konten.nilai');
+    }
+
+    // Menampilkan halaman profile dosen
+    public function profileDosen()
+    {
+        return view('dsn.profileDsn');
     }
 }

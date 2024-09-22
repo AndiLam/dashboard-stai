@@ -1,85 +1,88 @@
 @extends('dashLayout.app')
 
-@section('title', 'Dashboard Mahasiswa')
+@section('title', 'Dashboard Mahasiswa - STAI Al-Masthuriyah')
 
 @section('sidebar')
     @include('mhs.layouts.sidebar')
 @endsection
 
-
 @section('content')
-<div class="dashboard">
     <h1 class="text-4xl mb-5">Dashboard Mahasiswa</h1>
-    <div class="semester-info">
-        <p>Semester: 20241 (2024/2025 Ganjil)</p>
-    </div>
+        <p class="mb-2">Semester: 20241 (2024/2025 Ganjil)</p>
     <div class="card-container flex gap-5 flex-wrap">
         <div class="card bg-white rounded-lg shadow-md p-4 flex-1 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <i class="fas fa-calendar-alt text-3xl text-green-600 mb-3"></i>
-            <h2 class="font-serif text-2xl mb-2 text-green-600">Pengisian Rencana Studi</h2>
+            <i class="fas fa-calendar-alt text-3xl text-konten-green mb-3"></i>
+            <h2 class="font-serif text-2xl mb-2 text-gray-800">Pengisian Rencana Studi</h2>
             <p class="text-gray-600">19-08-2024 S.D 26-09-2024</p>
         </div>
         <div class="card bg-white rounded-lg shadow-md p-4 flex-1 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <i class="fas fa-thumbs-up text-3xl text-green-600 mb-3"></i>
-            <h2 class="font-serif text-2xl mb-2 text-green-600">Persetujuan Rencana Studi</h2>
+            <i class="fas fa-thumbs-up text-3xl text-konten-green mb-3"></i>
+            <h2 class="font-serif text-2xl mb-2 text-gray-800">Persetujuan Rencana Studi</h2>
             <p class="text-gray-600">19-08-2024 S.D 27-09-2024</p>
         </div>
         <div class="card bg-white rounded-lg shadow-md p-4 flex-1 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <i class="fas fa-users text-3xl text-green-600 mb-3"></i>
-            <h2 class="font-serif text-2xl mb-2 text-green-600">Pemilihan Kelas</h2>
+            <i class="fas fa-users text-3xl text-konten-green mb-3"></i>
+            <h2 class="font-serif text-2xl mb-2 text-gray-800">Pemilihan Kelas</h2>
             <p class="text-gray-600">19-08-2024 S.D 28-09-2024</p>
         </div>
     </div>
-    <div class="billing-info bg-white p-4 mt-5">
-        <h3 class="text-2xl mb-4">Informasi Tagihan Biaya Kuliah</h3>
-        <p>Pembayaran Biaya Kuliah ditransfer ke Virtual Account Bank BNI <strong>(9884215910121304)</strong></p>
-        <table class="w-full border-collapse mt-4">
-            <thead>
-                <tr class="bg-green-700 text-white">
-                    <th class="p-3 border">Angsuran</th>
-                    <th class="p-3 border">Biaya Kuliah</th>
-                    <th class="p-3 border">Virtual Account</th>
-                    <th class="p-3 border">Periode Pembayaran</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="p-3 border">Angsuran 1 Smt 7 (Tahap 1)</td>
-                    <td class="p-3 border">4.403.000</td>
-                    <td class="p-3 border">9884215910121304</td>
-                    <td class="p-3 border">26 - 30 Agustus 2024</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     <section class="content mt-5">
-        <h2 class="text-2xl mb-4">Indeks Prestasi</h2>
-        <table class="w-full border-collapse">
+        <h3 class="text-2xl mb-4">Informasi Tagihan Biaya Kuliah</h3>
+        <p>Pembayaran Biaya Kuliah bisa melalui transfer ke Bank BNI <strong>(11223344)</strong> atau tunai ke bagian keuangan</p>
+        <table class="border-collapse w-full border border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm">
             <thead>
-                <tr class="bg-green-700 text-white">
-                    <th class="p-3 border">Semester</th>
-                    <th class="p-3 border">Indeks Prestasi</th>
-                    <th class="p-3 border">SKS</th>
+                <tr class="bg-green-800 text-white">
+                    <th style="width: 20%" class="p-3 border">Histori Pembayaran</th>
+                    <th style="width: 20%" class="p-3 border">Biaya Kuliah</th>
+                    <th style="width: 30%" class="p-3 border">Metode Pembayaran</th>
+                    <th style="width: 30%" class="p-3 border">Keterangan</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="p-3 border">Ganjil 2023/2024</td>
-                    <td class="p-3 border">3.85</td>
-                    <td class="p-3 border">24</td>
-                </tr>
-                <tr>
-                    <td class="p-3 border">Genap 2023/2024</td>
-                    <td class="p-3 border">3.90</td>
-                    <td class="p-3 border">22</td>
-                </tr>
-                <tr>
-                    <td class="p-3 border">Ganjil 2024/2025</td>
-                    <td class="p-3 border">3.80</td>
-                    <td class="p-3 border">24</td>
+                    <td style="width: 20%" class="p-3 border">Januari 2024</td>
+                    <td style="width: 20%" class="p-3 border">Rp300.000</td>
+                    <td style="width: 30%" class="p-3 border">Tunai</td>
+                    <td style="width: 30%" class="p-3 border">Sudah Lunas</td>
                 </tr>
             </tbody>
         </table>
     </section>
-</div>
+    <section class="content mt-5">
+        <h3 class="text-2xl mb-4">Indeks Prestasi</h2>
+            <table class="border-collapse w-full border border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm">
+                <thead class="bg-green-800 text-white">
+                    <tr>
+                        <th rowspan="2" style="width: 7%" class="border border-gray-300 p-2">SEMESTER</th>
+                        <th rowspan="2" style="width: 5%" class="border border-gray-300 p-2">JUMLAH SKS</th>
+                        <th rowspan="2" style="width: 5%" class="border border-gray-300 p-2">JUMLAH MATAKULIAH</th>
+                        <th rowspan="2" style="width: 10%" class="border border-gray-300 p-2">INDEX PRESTASI<br>SEMESTER (IPS)</th>
+                        <th colspan="6" style="width: 10%" class="border border-gray-300 p-2 text-center">JUMLAH NILAI<br>MATAKULIAH</th>
+                    </tr>
+                    <tr>
+                        <th style="width: 7%" class="border border-gray-300 p-2">A</th>
+                        <th style="width: 7%" class="border border-gray-300 p-2">B</th>
+                        <th style="width: 7%" class="border border-gray-300 p-2">C</th>
+                        <th style="width: 7%" class="border border-gray-300 p-2">D</th>
+                        <th style="width: 7%" class="border border-gray-300 p-2">E</th>
+                        <th style="width: 7%" class="border border-gray-300 p-2">T</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2" style="width: 7%">20241</td>
+                        <td class="border border-gray-300 p-2" style="width: 5%">20</td>
+                        <td class="border border-gray-300 p-2" style="width: 5%">7</td>
+                        <td class="border border-gray-300 p-2" style="width: 10%">4.00</td>
+                        <td class="border border-gray-300 p-2" style="width: 7%">7</td>
+                        <td class="border border-gray-300 p-2" style="width: 7%">0</td>
+                        <td class="border border-gray-300 p-2" style="width: 7%">0</td>
+                        <td class="border border-gray-300 p-2" style="width: 7%">0</td>
+                        <td class="border border-gray-300 p-2" style="width: 7%">0</td>
+                        <td class="border border-gray-300 p-2" style="width: 7%">0</td>
+                    </tr>
+                    <!-- semester lainnya -->
+                </tbody>
+            </table>                                    
+    </section>
 @endsection
