@@ -23,7 +23,7 @@
         <div class="border p-4 rounded-b-lg bg-gray-50">
             <div class="flex justify-between items-center mb-6 border-b pb-2">
                 <div class=" ml-5 flex items-center">
-                    <img src="{{ asset('images/SATI.png') }}" alt="STAI Almast" class="h-20 mr-4">
+                    <img src="{{ asset('images/STAI.png') }}" alt="STAI Almast" class="h-20 mr-4">
                 </div>
                 <div>
                     <h1 class="text-xl font-bold">SEKOLAH TINGGI AGAMA ISLAM</h1>
@@ -59,14 +59,14 @@
                         <p>Ganjil 2024/2025</p>
                     </div>
                     <div class="flex items-center mb-2">
-                        <p class="w-28 font-bold">Fakultas</p>
-                        <p class=" pr-2 font-bold">:</p>
-                        <p>-</p>
-                    </div>
-                    <div class="flex items-center mb-2">
                         <p class="w-28 font-bold">Jurusan</p>
                         <p class=" pr-2 font-bold">:</p>
                         <p>Pendidikan Agama Islam</p>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <p class="w-28 font-bold">Kelas</p>
+                        <p class=" pr-2 font-bold">:</p>
+                        <p>PAI-A</p>
                     </div>
                 </div>
             </div>      
@@ -89,7 +89,7 @@
                     <tr>
                         <td class="p-3 border text-center">1</td>
                         <td class="p-3 border text-center">00001</td>
-                        <td class="p-3 border">Ilmu Pendidikan Islam	</td>
+                        <td class="p-3 border">Ilmu Pendidikan Islam</td>
                         <td class="p-3 border text-center">3</td>
                         <td class="p-3 border text-center">PAI-1</td>
                         <td class="p-3 border text-center">Jumat</td>
@@ -191,10 +191,10 @@
         </div>
     </div>
     <div class="flex justify-end mt-4 gap-4">
-        <a href="#" class="bg-green-500 text-white hover:bg-green-950 px-4 py-2 rounded-md">
+        <a href="#" class="bg-green-500 text-white hover:bg-green-950 px-4 py-2 rounded-t-md">
             Download Kartu Rencana Studi
         </a>
-        <a href="#" class="bg-green-500 text-white hover:bg-green-950 px-4 py-2 rounded-md">
+        <a href="#" class="bg-green-500 text-white hover:bg-green-950 px-4 py-2 rounded-t-md">
             Download Kartu Ujian
         </a>
     </div>

@@ -36,7 +36,7 @@
         </select>
     </div>
     <div class="flex self-end">
-        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Tampilkan</button>
+        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Filter</button>
     </div>
 </div>
 <h2 class="text-lg mb-5">List Mahasiswa</h2>

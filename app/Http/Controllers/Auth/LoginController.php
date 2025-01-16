@@ -13,12 +13,18 @@ class LoginController extends Controller
     ];
 
     protected $dosenUsers = [
-        ['nidn' => '445566', 'password' => '445566'],
+        ['nuptk' => '445566', 'password' => '445566'],
     ];
 
     protected $adminUsers = [
         ['username' => 'admin', 'password' => 'admin123'],
     ];
+
+
+    public function showRole()
+    {
+        return view('index');
+    }
 
 
     public function showMhsLoginForm()
@@ -56,17 +62,17 @@ class LoginController extends Controller
     // Login Dosen
     public function loginDsn(Request $request)
     {
-        $nidn = $request->input('nidn');
+        $nuptk = $request->input('nuptk');
         $password = $request->input('password');
 
         foreach ($this->dosenUsers as $user) {
-            if ($user['nidn'] === $nidn && $user['password'] === $password) {
-                $request->session()->put('user', ['role' => 'dosen', 'nidn' => $nidn]);
+            if ($user['nuptk'] === $nuptk && $user['password'] === $password) {
+                $request->session()->put('user', ['role' => 'dosen', 'nuptk' => $nuptk]);
                 return redirect()->route('dashboardDsn')->with('success', 'Login berhasil sebagai Dosen');
             }
         }
 
-        return back()->withErrors(['message' => 'Login gagal, NIDN atau Password salah']);
+        return back()->withErrors(['message' => 'Login gagal, NUPTK atau Password salah']);
     }
 
     // Login Admin

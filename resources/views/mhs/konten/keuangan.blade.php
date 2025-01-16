@@ -20,6 +20,7 @@
                     <th class="p-3 border">Nominal</th>
                     <th class="p-3 border">Nominal Bayar</th>
                     <th class="p-3 border">Metode Pembayaran</th>
+                    <th class="p-3 border">Keterangan</th>
                     <th rowspan="2" class="border border-hidden bg-gray-50"><a href="#" class="bg-green-500 text-white hover:bg-green-900 px-4 py-2 rounded-md">Bayar</a></th>
                 </tr>
                 <tr class="text-gray-700 bg-gray-50 hover:bg-gray-100 transition-all duration-300">
@@ -32,7 +33,7 @@
                             <option value="maret">Maret</option>
                         </select>
                     </td>
-                    <td class="p-3 border">Rp.300.000</td>
+                    <td class="p-3 border">Rp300.000</td>
                     <td class="p-3 border">
                         <input type="number" id="nominal" name="nominal" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="Masukkan Nominal">
                     </td>
@@ -42,6 +43,9 @@
                             <option value="tunai">Tunai</option>
                             <option value="transfer">Transfer</option>
                         </select>
+                    </td>
+                    <td class="p-3 border">
+                        <input type="text" id="note" name="note" class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-green-700" placeholder="Masukkan Catatan...">
                     </td>
                 </tr>
             </thead>
@@ -83,7 +87,7 @@
         <div class="border p-4 rounded-b-lg bg-gray-50">
             <div class="flex justify-between items-center mb-6 border-b pb-2">
                 <div class=" ml-5 flex items-center">
-                    <img src="{{ asset('images/SATI.png') }}" alt="STAI Almast" class="h-20 mr-4">
+                    <img src="{{ asset('images/STAI.png') }}" alt="STAI Almast" class="h-20 mr-4">
                 </div>
                 <div>
                     <h1 class="text-xl font-bold">SEKOLAH TINGGI AGAMA ISLAM</h1>
@@ -119,14 +123,14 @@
                         <p>Ganjil 2024/2025</p>
                     </div>
                     <div class="flex items-center mb-2">
-                        <p class="w-28 font-bold">Fakultas</p>
-                        <p class=" pr-2 font-bold">:</p>
-                        <p>-</p>
-                    </div>
-                    <div class="flex items-center mb-2">
                         <p class="w-28 font-bold">Jurusan</p>
                         <p class=" pr-2 font-bold">:</p>
                         <p>Pendidikan Agama Islam</p>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <p class="w-28 font-bold">Kelas</p>
+                        <p class=" pr-2 font-bold">:</p>
+                        <p>PAI-A</p>
                     </div>
                 </div>
             </div>

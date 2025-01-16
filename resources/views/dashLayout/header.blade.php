@@ -5,8 +5,8 @@
     <div class="text-lg font-semibold">MY ACADEMIC</div>
     <div class="relative">
         <div id="profileDropdownToggle" class="flex items-center cursor-pointer">
-            <img src="{{ asset('images/tes.jpg') }}" alt="User Profile" class="w-8 h-8 mr-2 object-fill">
-            <span>{{ session('user')['nim'] ?? session('user')['nidn'] ?? session('user')['username'] }}</span>
+            <img src="{{ asset('images/STAI.png') }}" alt="Profile" class="w-8 h-8 mr-2 object-fill">
+            <span>{{ session('user')['nim'] ?? session('user')['nuptk'] ?? session('user')['username'] }}</span>
             <div class="relative ml-1 w-4 h-4">
                 <i class="fas fa-chevron-down absolute top-0 left-0 transition-transform duration-300"></i>
                 <i class="fas fa-times text-lg absolute top-0 left-0 opacity-0 transition-opacity duration-350"></i>

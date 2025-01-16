@@ -9,23 +9,6 @@
 @section('content')
     <h1 class="text-4xl mb-5">Dashboard Mahasiswa</h1>
         <p class="mb-2">Semester: 20241 (2024/2025 Ganjil)</p>
-    <div class="card-container flex gap-5 flex-wrap">
-        <div class="card bg-white rounded-lg shadow-md p-4 flex-1 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <i class="fas fa-calendar-alt text-3xl text-konten-green mb-3"></i>
-            <h2 class="font-serif text-2xl mb-2 text-gray-800">Pengisian Rencana Studi</h2>
-            <p class="text-gray-600">19-08-2024 S.D 26-09-2024</p>
-        </div>
-        <div class="card bg-white rounded-lg shadow-md p-4 flex-1 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <i class="fas fa-thumbs-up text-3xl text-konten-green mb-3"></i>
-            <h2 class="font-serif text-2xl mb-2 text-gray-800">Persetujuan Rencana Studi</h2>
-            <p class="text-gray-600">19-08-2024 S.D 27-09-2024</p>
-        </div>
-        <div class="card bg-white rounded-lg shadow-md p-4 flex-1 transform transition-transform hover:scale-105 hover:shadow-lg">
-            <i class="fas fa-users text-3xl text-konten-green mb-3"></i>
-            <h2 class="font-serif text-2xl mb-2 text-gray-800">Pemilihan Kelas</h2>
-            <p class="text-gray-600">19-08-2024 S.D 28-09-2024</p>
-        </div>
-    </div>
     <section class="content mt-5">
         <h3 class="text-2xl mb-4">Informasi Tagihan Biaya Kuliah</h3>
         <p>Pembayaran Biaya Kuliah bisa melalui transfer ke Bank BNI <strong>(11223344)</strong> atau tunai ke bagian keuangan</p>

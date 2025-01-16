@@ -44,7 +44,7 @@
         </select>
     </div>
     <div class="flex self-end">
-        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Tampilkan</button>
+        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Filter</button>
     </div>
 </div>
 <table class="border-collapse w-full border border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm"> 

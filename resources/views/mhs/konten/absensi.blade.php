@@ -40,7 +40,7 @@
     <span class="border border-black bg-blue-500 w-5 h-5 flex items-center justify-center">
         <i class="fas fa-plane fa-xs"></i>
     </span>:
-    <span>Ijin</span>
+    <span>Izin</span>
 
     <span class="border border-black bg-red-500 w-5 h-5 flex items-center justify-center">
         <i class="fas fa-times"></i>
@@ -90,10 +90,11 @@
             <td class="border border-gray-400 px-4 py-2">PAI-1</td>
             <td class="border border-gray-400 px-4 py-2">PAI-A/S1/I</td>
             <td class="border border-gray-400 px-4 py-2">Sopian Alviana, S.Kom., M.Kom</td>
-            @for ($i = 1; $i <= 16; $i++)
-                <td class="border border-gray-400 px-2 py-1 text-center"><i class="fas fa-check"></i></td>
+            @for ($i = 1; $i <= 16; $i++)                
+            </span>
+                <td class="border border-gray-400 px-2 py-1 text-center bg-yellow-300"><i class="fas fa-bed fa-xs"></i></td>
             @endfor
-            <td class="border border-gray-400 px-4 py-2 text-center">16 (100%)</td>
+            <td class="border border-gray-400 px-4 py-2 text-center">16 (0%)</td>
         </tr>
         <tr>
             <td class="border border-gray-400 px-4 py-2 text-center">3</td>
@@ -103,9 +104,9 @@
             <td class="border border-gray-400 px-4 py-2">PAI-A/S1/I</td>
             <td class="border border-gray-400 px-4 py-2">Sopian Alviana, S.Kom., M.Kom</td>
             @for ($i = 1; $i <= 16; $i++)
-                <td class="border border-gray-400 px-2 py-1 text-center"><i class="fas fa-check"></i></td>
+                <td class="border border-gray-400 px-2 py-1 text-center bg-blue-500"><i class="fas fa-plane fa-xs"></i></td>
             @endfor
-            <td class="border border-gray-400 px-4 py-2 text-center">16 (100%)</td>
+            <td class="border border-gray-400 px-4 py-2 text-center">16 (0%)</td>
         </tr>
         <tr>
             <td class="border border-gray-400 px-4 py-2 text-center">4</td>
@@ -115,9 +116,9 @@
             <td class="border border-gray-400 px-4 py-2">PAI-A/S1/VII</td>
             <td class="border border-gray-400 px-4 py-2">Sopian Alviana, S.Kom., M.Kom</td>
             @for ($i = 1; $i <= 16; $i++)
-                <td class="border border-gray-400 px-2 py-1 text-center"><i class="fas fa-check"></i></td>
+                <td class="border border-gray-400 px-2 py-1 text-center bg-red-500"><i class="fas fa-times"></i></td>
             @endfor
-            <td class="border border-gray-400 px-4 py-2 text-center">16 (100%)</td>
+            <td class="border border-gray-400 px-4 py-2 text-center">16 (0%)</td>
         </tr>
         <tr>
             <td class="border border-gray-400 px-4 py-2 text-center">5</td>

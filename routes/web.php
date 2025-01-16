@@ -9,7 +9,10 @@ use App\Http\Controllers\AdmController;
 
 
 route::get('/', function() {   
-    return redirect('/login');});
+    return redirect('/index');});
+
+Route::get('/index', [LoginController::class, 'showRole'])->name('showRole');
+
 
 // Rute untuk login mahasiswa
 Route::get('/login', [LoginController::class, 'showMhsLoginForm'])->name('loginMhs');
@@ -32,7 +35,7 @@ Route::get('/dashboard-admin', [DashboardController::class, 'adminDashboard'])->
 Route::get('/krs', [MhsController::class, 'krs'])->name('krs');
 Route::get('/kartu-hasil-studi', [MhsController::class, 'kartuHasilStudi'])->name('khs');
 Route::get('/jadwal-kuliah', [MhsController::class, 'jadwalKuliah'])->name('jadwal');
-Route::get('/pengisian-rencana-studi', [MhsController::class, 'pengisianRencanaStudi'])->name('prs');
+Route::get('/rencana-studi', [MhsController::class, 'pengisianRencanaStudi'])->name('prs');
 Route::get('/status-mahasiswa', [MhsController::class, 'statusAktif'])->name('status');
 Route::get('/absensi-mahasiswa', [MhsController::class, 'absensi'])->name('absensi');
 Route::get('/riwayat-nilai', [MhsController::class, 'riwayat'])->name('riwayat');
@@ -43,17 +46,29 @@ Route::get('/perpustakaan', [MhsController::class, 'perpustakaan'])->name('perpu
 // Rute untuk fitur dosen (KRS, KHS, Jadwal, dll.)
 Route::get('/jadwal-kelas', [DsnController::class, 'jadwalKelas'])->name('jadwalKls');
 Route::get('/isi-absensi', [DsnController::class, 'isiAbsensi'])->name('absen');
+route::get('/absen-dsn/{semester}/{kelas}/{MatKul}', [DsnController::class, 'showAbsenDsn'])->name('showAbsenDsn');
 Route::get('/pengisian-nilai', [DsnController::class, 'isiNilai'])->name('isiNilai');
+route::get('/nilai-dsn/{semester}/{kelas}/{MatKul}', [DsnController::class, 'showNilaiDsn'])->name('showNilaiDsn');
+
 
 // Rute untuk fitur admin (absen, nilai, dll.)
-Route::get('/isi-absensi-adm', [AdmController::class, 'isiAbsensiAdm'])->name('absenAdm');
-route::get('/absen-adm/{semester}/{kelas}/{prodi}', [AdmController::class, 'showAbsenAdm'])->name('showAbsenAdm');
-Route::get('/pengisian-nilai-adm', [AdmController::class, 'isiNilaiAdm'])->name('nilaiAdm');
-Route::get('/keuangan-adm', [AdmController::class, 'keuangAdm'])->name('uangAdm');
-Route::get('/edit-dosen-adm', [AdmController::class, 'editDosenAdm'])->name('dosenAdm');
-Route::get('/edit-mahasiswa-adm', [AdmController::class, 'editMahasiswaAdm'])->name('mhsAdm');
-Route::get('/edit-matkul-adm', [AdmController::class, 'editMatkulAdm'])->name('matkulAdm');
-Route::get('/edit-jadwal-matkul-adm', [AdmController::class, 'editJadwalKuliahAdm'])->name('jadwalAdm');
+Route::get('/isi-absensi-admin', [AdmController::class, 'isiAbsensiAdm'])->name('absenAdm');
+route::get('/absen-admin/{semester}/{kelas}/{MatKul}', [AdmController::class, 'showAbsenAdm'])->name('showAbsenAdm');
+Route::get('/pengisian-nilai-admin', [AdmController::class, 'isiNilaiAdm'])->name('nilaiAdm');
+route::get('/nilai-admin/{semester}/{kelas}/{MatKul}', [AdmController::class, 'showNilaiAdm'])->name('showNilaiAdm');
+Route::get('/keuangan-admin', [AdmController::class, 'keuangAdm'])->name('uangAdm');
+Route::get('/edit-dosen-admin', [AdmController::class, 'editDosenAdm'])->name('dosenAdm');
+Route::get('/edit-mahasiswa-admin', [AdmController::class, 'editMahasiswaAdm'])->name('mhsAdm');
+Route::get('/edit-matkul-admin', [AdmController::class, 'editMatkulAdm'])->name('matkulAdm');
+Route::get('/edit-jadwal-matkul-admin', [AdmController::class, 'editJadwalKuliahAdm'])->name('jadwalAdm');
+Route::get('/edit-ruangan-admin', [AdmController::class, 'editGedungAdm'])->name('gedungAdm');
+Route::get('/kelola-admin', [AdmController::class, 'kelolaAdmin'])->name('kelolaAdm');
+Route::get('/tambah-admin', [AdmController::class, 'tambahAdmin'])->name('tambahAdm');
+Route::get('/tambah-dosen', [AdmController::class, 'tambahDosen'])->name('tambahDsn');
+Route::get('/tambah-mahasiswa', [AdmController::class, 'tambahMahasiswa'])->name('tambahMhs');
+Route::get('/tambah-matkul', [AdmController::class, 'tambahMatkul'])->name('tambahMk');
+Route::get('/tambah-jadwal', [AdmController::class, 'tambahJadwalMatkul'])->name('tambahJadwalMk');
+Route::get('/tambah-ruangan', [AdmController::class, 'tambahRuangan'])->name('tambahKls');
 
 
 

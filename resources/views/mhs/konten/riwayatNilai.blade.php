@@ -215,10 +215,10 @@
                     <!-- Kaprodi -->
                     <div class="w-2/5 text-center">
                         <p>Sukabumi, 12-09-2024</p>
-                        <p><strong>Ketua Program Studi</strong></p>
+                        <p><strong>Ketua Bidang 1 Akademik</strong></p>
                         <br><br>
-                        <p><strong>M. Nasir M.Ag.</strong></p>
-                        <p>NIP: -</p>
+                        <p><strong>Dr. R. Dedi Supriatna M.Ag.</strong></p>
+                        <p>NIDN: -</p>
                     </div>
                 </div>
     

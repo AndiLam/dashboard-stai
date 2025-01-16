@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<h1 class="text-4xl mb-5">Nilai Mahasiswa</h1>
+<h1 class="text-4xl mb-5">Nilai Mahasiswa untuk Mata Kuliah {{ $MatKul }}</h1>
 <!-- Filter -->
 <div class="flex items-end space-x-4 mb-4">
     <div class="flex flex-col space-y-1">
@@ -35,10 +35,10 @@
         </select>
     </div>
     <div class="flex self-end">
-        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Tampilkan</button>
+        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Filter</button>
     </div>
 </div>
-<h2 class="text-lg mb-5">List Mahasiswa</h2>
+<h2 class="text-lg mb-5">Daftar Mahasiswa Kelas {{ $kelas }}</h2>
 <table class="border-collapse w-full border border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm"> 
     <thead>
         <tr class="bg-green-800 text-white">
@@ -70,7 +70,7 @@
         </tr>
     </tbody>
 </table>
-<<div class="w-full flex justify-end mt-4">
+<div class="w-full flex justify-end mt-4">
     <a href="#" class="bg-custom-blue text-white hover:bg-blue-950 px-4 py-2 rounded-t-lg">Ubah Nilai</a>
 </div>
 @endsection

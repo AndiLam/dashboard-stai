@@ -7,13 +7,12 @@
 @endsection
 
 @section('content')
-<h1 class="text-4xl mb-5">Absensi Mahasiswa untuk Kelas {{ $kelas }}</h1>
+<h1 class="text-4xl mb-5">Absensi Mahasiswa untuk Mata Kuliah {{ $MatKul }}</h1>
 <!-- Tampilkan detail absensi sesuai kelas -->
-<h2 class="text-lg mb-5">Daftar Mahasiswa Kelas {{ $kelas }}</h2>
 <div class="flex items-end space-x-4 mb-4">
     <div class="flex flex-col space-y-1">
-        <label for="mataKuliah" class="text-sm font-medium">Pilih Pertemuan</label>
-        <select id="mataKuliah" class="pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md">
+        <label for="pertemuan" class="text-sm font-medium">Pilih Pertemuan</label>
+        <select id="pertemuan" class="pl-3 pr-10 py-2 border border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md">
             <option>Pertemuan 1</option>
             <option>Pertemuan 2</option>
             <option>Pertemuan 3</option>
@@ -33,10 +32,10 @@
         </select>
     </div>
     <div class="flex self-end">
-        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Tampilkan</button>
+        <button class="bg-green-700 text-white hover:bg-green-900 px-4 py-2 rounded-md">Filter</button>
     </div>
 </div>
-<h2 class="text-lg mb-5">List Mahasiswa</h2>
+<h2 class="text-lg mb-5">Daftar Mahasiswa Kelas {{ $kelas }}</h2>
 <table class="border-collapse w-full border border-slate-400 dark:border-slate-500 bg-white dark:bg-slate-800 text-sm shadow-sm"> 
     <thead>
         <tr class="bg-green-800 text-white">

@@ -13,7 +13,7 @@
         <div class="border p-4 rounded-md bg-gray-50">
             <div class="flex justify-between items-center mb-6 border-b pb-2">
                 <div class=" ml-5 flex items-center">
-                    <img src="{{ asset('images/SATI.png') }}" alt="STAI Almast" class="h-20 mr-4">
+                    <img src="{{ asset('images/STAI.png') }}" alt="STAI Almast" class="h-20 mr-4">
                 </div>
                 <div>
                     <h1 class="text-xl font-bold">SEKOLAH TINGGI AGAMA ISLAM</h1>
@@ -49,14 +49,14 @@
                         <p>Ganjil 2024/2025</p>
                     </div>
                     <div class="flex items-center mb-2">
-                        <p class="w-28 font-bold">Fakultas</p>
-                        <p class=" pr-2 font-bold">:</p>
-                        <p>-</p>
-                    </div>
-                    <div class="flex items-center mb-2">
                         <p class="w-28 font-bold">Jurusan</p>
                         <p class=" pr-2 font-bold">:</p>
                         <p>Pendidikan Agama Islam</p>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <p class="w-28 font-bold">Kelas</p>
+                        <p class=" pr-2 font-bold">:</p>
+                        <p>PAI-A</p>
                     </div>
                 </div>
             </div>      

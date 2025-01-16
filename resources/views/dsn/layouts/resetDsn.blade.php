@@ -2,11 +2,11 @@
 
 @section('content')
         <div class="flex justify-start mb-2 ml-1">
-            <p class="text-sm text-gray-500">Masukkan NIDN Anda</p>
+            <p class="text-sm text-gray-500">Masukkan NUPTK Anda</p>
         </div> 
 
         <div class="mb-4">
-            <input id="nidn" type="text" name="nidn" placeholder="NIDN" class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" required>
+            <input id="nuptk" type="text" name="nuptk" placeholder="NUPTK" class="block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" required>
         </div>     
 
         <div class="flex items-center justify-between mb-6">

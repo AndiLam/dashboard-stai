@@ -19,10 +19,10 @@
             <a href="{{ route('mhsReset') }}" class="text-sm text-green-600 hover:underline">Lupa Password?</a>
         </div>
         <div class="flex items-center justify-between mb-2">
-            <button type="submit" class="w-full bg-green-800 hover:bg-green-950 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Login</button>
+            <button type="submit" class="w-full bg-green-800 hover:bg-green-950 text-white font-bold py-2 px-4 rounded-lg transition duration-300">Login Mahasiswa</button>
         </div>
         <div class="text-center">
-            <a href="{{ route('loginDsn') }}" class="inline-block w-full bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-lg hover:bg-custom-blue-dark transition duration-300">Login Sebagai Dosen</a>
+            <a href="{{ route('showRole') }}" class="inline-block w-full bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-lg hover:bg-custom-blue-dark transition duration-300">Kembali</a>
         </div>        
     </form>
 @endsection

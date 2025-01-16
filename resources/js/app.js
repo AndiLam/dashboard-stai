@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {            
-    // buat header
     const profileToggle = document.getElementById('profileDropdownToggle');
     const profileMenu = document.getElementById('profileDropdownMenu');
     const logoutLink = document.getElementById('logoutLink');
-    const arrowIcon = profileToggle.querySelector('.fa-chevron-down');
-    const xIcon = profileToggle.querySelector('.fa-times');
+    const arrowIcon = profileToggle ? profileToggle.querySelector('.fa-chevron-down') : null;
+    const xIcon = profileToggle ? profileToggle.querySelector('.fa-times') : null;
 
     if (profileToggle && profileMenu && arrowIcon && xIcon) {
         profileToggle.addEventListener('click', function() {
@@ -32,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
 
     // buat halaman prs
     document.querySelectorAll('input[type="radio"][name="matkul"]').forEach(function(radio) {
@@ -90,31 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set default active tab
         setActiveTab('btnSwitch1', 'switch1');
     }
-
-
-    // buat ambil data negara untuk ditampilkan di profile
-    fetch('https://restcountries.com/v3.1/all')
-    .then(response => response.json())
-    .then(negaraData => {
-        const kewarganegaraanSelect = document.getElementById('pilihNegara');
-        const indonesiaOption = { cca2: 'ID', name: { common: 'Indonesia' } };
-
-        // Urutkan negara secara alfabet
-        negaraData.sort((a, b) => a.name.common.localeCompare(b.name.common));
-
-        // Pindahkan Indonesia ke atas
-        const sortedCountries = [indonesiaOption, ...negaraData.filter(country => country.name.common !== 'Indonesia')];
-
-        if (kewarganegaraanSelect) {
-            sortedCountries.forEach(negara => {
-                const option = document.createElement('option');
-                option.value = negara.cca2;
-                option.text = negara.name.common;
-                kewarganegaraanSelect.appendChild(option);
-            });
-        }
-    })
-    .catch(error => console.error('Error fetching countries:', error));
 
     // Ambil data Provinsi
     fetch('https://ibnux.github.io/data-indonesia/provinsi.json')
@@ -239,27 +214,65 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error fetching kelurahan:', error));
     }
 
-    //buat ADMIN
-    const dropdownButton = document.getElementById('menejAka');
-    const dropdownMenu = document.getElementById('menejAkaMenu');
-    const dropdownArrow = dropdownButton.querySelector('.fa-chevron-down');
-    const dropdownX = dropdownButton.querySelector('.fa-times');
-    
-    if (dropdownButton && dropdownMenu && dropdownX){
-        dropdownButton.addEventListener('click', function() {
-            dropdownMenu.classList.toggle('hidden');
-            dropdownArrow.classList.toggle('opacity-0');
-            dropdownX.classList.toggle('opacity-0');
-            dropdownArrow.classList.toggle('rotate-180');
-        });
-    
-        document.addEventListener('click', function(event) {
-            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.add('hidden');
-                dropdownArrow.classList.remove('rotate-180');
-                dropdownArrow.classList.remove('opacity-0');
-                dropdownX.classList.add('opacity-0');
+
+    // buat dosen
+    const btnHadirSemua = document.getElementById('btnHadirSemua');
+    if (btnHadirSemua) {
+        btnHadirSemua.addEventListener('click', function(event) {
+            const kehadiranDropdowns = document.querySelectorAll('.kehadiran');
+            if (kehadiranDropdowns.length) {
+                kehadiranDropdowns.forEach(dropdown => dropdown.value = '1');
+            } else {
+                console.warn('No elements with class "kehadiran" found');
             }
         });
     }
+
+
+    // buat ADMIN
+    const dropdownButton = document.getElementById('menejAka');
+    const dropdownMenu = document.getElementById('menejAkaMenu');
+
+    if (dropdownButton && dropdownMenu) {
+        const dropdownArrow = dropdownButton.querySelector('.fa-chevron-down');
+        const dropdownX = dropdownButton.querySelector('.fa-times');
+
+        if (dropdownArrow && dropdownX) {
+            dropdownButton.addEventListener('click', function () {
+                dropdownMenu.classList.toggle('hidden');
+                dropdownArrow.classList.toggle('opacity-0');
+                dropdownX.classList.toggle('opacity-0');
+                dropdownArrow.classList.toggle('rotate-180');
+            });
+
+            document.addEventListener('click', function (event) {
+                if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add('hidden');
+                    dropdownArrow.classList.remove('rotate-180');
+                    dropdownArrow.classList.remove('opacity-0');
+                    dropdownX.classList.add('opacity-0');
+                }
+            });
+        }
+    }
+
+
+    // filter
+
+    // searching di admin
+    document.getElementById('search').addEventListener('input', function() {
+        const filter = this.value.toLowerCase();
+        const rows = document.querySelectorAll('#kelasTableBody tr');
+    
+        rows.forEach(row => {
+            const matkulCell = row.children[3].textContent.toLowerCase();
+            const dosenCell = row.children.length > 4 ? row.children[4].textContent.toLowerCase() : '';
+    
+            if (matkulCell.includes(filter) || dosenCell.includes(filter)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });    
 });

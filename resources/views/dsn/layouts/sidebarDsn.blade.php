@@ -5,9 +5,9 @@
         <p class="text-gray-400 border-b-2 border-gray-400 pb-3">445566</p>
     </div>
     <ul>
-        <li><a href="{{ route('dashboardDsn') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('dashboardDsn') ? 'bg-green-700 text-gray-900 font-semibold' : ' text-gray-400 hover:bg-green-700' }}"><i class="fas fa-home mr-2 fa-xs"></i> Home</a></li>
-        <li><a href="{{ route('jadwalKls') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('jadwalKls') ? 'bg-green-700 text-gray-900 font-semibold' : ' text-gray-400 hover:bg-green-700' }}"><i class="fas fa-file-alt mr-3.5 fa-xs"></i> Jadwal Mengajar</a></li>
-        <li><a href="{{ route('absen') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('absen') ? 'bg-green-700 text-gray-900 font-semibold' : ' text-gray-400 hover:bg-green-700' }}"><i class="fas fa-calendar mr-3 fa-xs"></i> Absensi Mahasiswa</a></li>
-        <li><a href="{{ route('isiNilai') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('isiNilai') ? 'bg-green-700 text-gray-900 font-semibold' : ' text-gray-400 hover:bg-green-700' }}"><i class="fas fa-pencil-alt mr-2.5 fa-xs"></i> Nilai Mahasiswa</a></li>
+        <li><a href="{{ route('dashboardDsn') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('dashboardDsn') ? 'bg-custom-green text-gray-200 font-semibold' : ' text-gray-400 hover:bg-custom-green' }}"><i class="fas fa-home mr-2 fa-xs"></i> Home</a></li>
+        <li><a href="{{ route('jadwalKls') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('jadwalKls') ? 'bg-custom-green text-gray-200 font-semibold' : ' text-gray-400 hover:bg-custom-green' }}"><i class="fas fa-file-alt mr-3.5 fa-xs"></i> Jadwal Mengajar</a></li>
+        <li><a href="{{ route('absen') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('absen') || request()->routeIs('showAbsenDsn') ? 'bg-custom-green text-gray-200 font-semibold' : ' text-gray-400 hover:bg-custom-green' }}"><i class="fas fa-calendar mr-3 fa-xs"></i> Absensi Mahasiswa</a></li>
+        <li><a href="{{ route('isiNilai') }}" class="block py-2 px-4 rounded-r-lg {{ request()->routeIs('isiNilai') || request()->routeIs('showNilaiDsn') ? 'bg-custom-green text-gray-200 font-semibold' : ' text-gray-400 hover:bg-custom-green' }}"><i class="fas fa-pencil-alt mr-2.5 fa-xs"></i> Nilai Mahasiswa</a></li>
     </ul>
 </nav>

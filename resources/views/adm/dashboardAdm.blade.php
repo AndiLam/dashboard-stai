@@ -74,11 +74,11 @@
             </div>
         </div>
     </div>
-    <!-- Card Jumlah Ruangan -->
+    <!-- Card Jumlah Gedung -->
     <div class="card bg-teal-500 rounded-xl shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
         <div class="flex items-center justify-between">
             <div class="flex-grow">
-                <h2 class="font-serif text-xl mb-2 text-white">Jumlah Ruangan</h2>
+                <h2 class="font-serif text-xl mb-2 text-white">Jumlah Gedung</h2>
                 <p class="text-white text-3xl font-bold">1</p>
             </div>
             <div class="text-white text-5xl">
